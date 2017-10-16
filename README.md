@@ -1,0 +1,1 @@
+As newbie in pathfinder I found that I'm too lazy for all calculates and char sheet is too large. As a result, I decided to create helper for other people like me.
