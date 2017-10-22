@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_char_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Strength" />
+
+    <TextView
+        android:id="@+id/tv_char_mod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="32dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_char_name"
+        app:layout_constraintRight_toLeftOf="@+id/ib_char_random"
+        tools:text="+3" />
+
+    <ImageButton
+        android:id="@+id/ib_char_random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:background="@null"
+        android:src="@drawable/ic_dice_multiple_grey600_48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_char_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_char_name"
+        app:layout_constraintVertical_bias="0.481" />
+
+    <TextView
+        android:id="@+id/tv_char_value"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:text="10"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_char_name"
+        app:layout_constraintRight_toLeftOf="@+id/ib_char_increase" />
+
+    <ImageButton
+        android:id="@+id/ib_char_decrease"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:background="@null"
+        app:layout_constraintRight_toLeftOf="@+id/tv_char_value"
+        app:srcCompat="@drawable/ic_minus_grey600_36dp"
+        tools:layout_editor_absoluteY="6dp" />
+
+    <ImageButton
+        android:id="@+id/ib_char_increase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:srcCompat="@drawable/ic_plus_grey600_36dp"
+        tools:layout_editor_absoluteY="6dp"
+        app:layout_constraintRight_toLeftOf="@+id/tv_char_mod"
+        android:layout_marginRight="16dp" />
+
+</android.support.constraint.ConstraintLayout>

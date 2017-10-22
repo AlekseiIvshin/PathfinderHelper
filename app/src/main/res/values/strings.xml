@@ -3,4 +3,19 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="characteristics.strength">Strength</string>
+
+    <!--Characteristic-->
+    <string name="strength">Strength</string>
+    <string name="strength.short">STR</string>
+    <string name="dexterity">Dexterity</string>
+    <string name="dexterity.short">DEX</string>
+    <string name="constitution">Constitution</string>
+    <string name="constitution.short">CON</string>
+    <string name="intelligence">Intelligence</string>
+    <string name="intelligence.short">INT</string>
+    <string name="wisdom">Wisdom</string>
+    <string name="wisdom.short">WIS</string>
+    <string name="charisma">Charisma</string>
+    <string name="charisma.short">CHA</string>
 </resources>
