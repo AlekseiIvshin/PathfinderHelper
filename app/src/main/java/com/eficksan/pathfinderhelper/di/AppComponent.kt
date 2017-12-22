@@ -1,7 +1,7 @@
 package com.eficksan.pathfinderhelper.di
 
 import com.eficksan.pathfinderhelper.repository.character.CharRepository
-import com.eficksan.pathfinderhelper.repository.character.CharSpecFactory
+import com.eficksan.pathfinderhelper.repository.character.HeroSpecFactory
 import dagger.Component
 import javax.inject.Singleton
 
@@ -14,5 +14,5 @@ import javax.inject.Singleton
 interface AppComponent {
 
     fun charRepository(): CharRepository
-    fun charSpecRepository(): CharSpecFactory
+    fun charSpecRepository(): HeroSpecFactory
 }

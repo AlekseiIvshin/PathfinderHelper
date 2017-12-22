@@ -3,12 +3,12 @@ package com.eficksan.pathfinderhelper.di.charlist
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
-import com.eficksan.pathfinderhelper.charlist.CharListFragment
-import com.eficksan.pathfinderhelper.charlist.CharListPresenter
-import com.eficksan.pathfinderhelper.charlist.CharListContract
+import com.eficksan.pathfinderhelper.charlist.HeroListFragment
+import com.eficksan.pathfinderhelper.charlist.HeroListPresenter
+import com.eficksan.pathfinderhelper.charlist.HeroListContract
 import com.eficksan.pathfinderhelper.di.FragmentScope
 import com.eficksan.pathfinderhelper.repository.character.CharRepository
-import com.eficksan.pathfinderhelper.repository.character.CharSpecFactory
+import com.eficksan.pathfinderhelper.repository.character.HeroSpecFactory
 import com.eficksan.pathfinderhelper.viewmodel.CharListViewModel
 import dagger.Module
 import dagger.Provides
@@ -18,7 +18,7 @@ import dagger.Provides
  * on 18.10.2017.
  */
 @Module
-class CharListModule(private val fragment: CharListFragment) {
+class CharListModule(private val fragment: HeroListFragment) {
 
     @Provides
     fun provideViewModelFactory(repository: CharRepository): ViewModelProvider.Factory {
@@ -37,6 +37,6 @@ class CharListModule(private val fragment: CharListFragment) {
 
     @Provides
     @FragmentScope
-    fun providePresenter(viewModel: CharListViewModel, repository: CharRepository, specFactory: CharSpecFactory): CharListContract.Presenter =
-            CharListPresenter(fragment, viewModel, repository, specFactory)
+    fun providePresenter(viewModel: CharListViewModel, repository: CharRepository, specFactory: HeroSpecFactory): HeroListContract.Presenter =
+            HeroListPresenter(fragment, viewModel, repository, specFactory)
 }

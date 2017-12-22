@@ -4,6 +4,7 @@ import android.app.Application
 import com.eficksan.pathfinderhelper.di.AppComponent
 import com.eficksan.pathfinderhelper.di.AppModule
 import com.eficksan.pathfinderhelper.di.DaggerAppComponent
+import com.eficksan.pathfinderhelper.di.RepositoryModule
 import io.realm.Realm
 
 /**
@@ -20,6 +21,9 @@ class App : Application() {
         super.onCreate()
 
         Realm.init(this)
-        appComponent = DaggerAppComponent.builder().appModule(AppModule(this)).build()
+        appComponent = DaggerAppComponent.builder()
+                .appModule(AppModule(this))
+                .repositoryModule(RepositoryModule(this))
+                .build()
     }
 }
