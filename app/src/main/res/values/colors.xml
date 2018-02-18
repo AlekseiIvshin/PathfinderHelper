@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#BDBDBD</color>
-    <color name="colorPrimaryDark">#616161</color>
-    <color name="colorAccent">#212121</color>
+    <color name="appPrimary">#BDBDBD</color>
+    <color name="appPrimaryDark">#616161</color>
+    <color name="appAccent">#212121</color>
+
+    <color name="appAccentPressed">#212121</color>
+    <color name="appAccentRipple">#212121</color>
+
+    <!--FAB-->
+    <color name="fab.text_color">@color/appAccent</color>
 </resources>

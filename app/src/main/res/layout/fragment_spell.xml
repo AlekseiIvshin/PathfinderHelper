@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_lbl_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:text="@string/school" />
+
+        <TextView
+            android:id="@+id/tv_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="%SCHOOL%"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_lbl_school"
+            app:layout_constraintStart_toEndOf="@+id/tv_lbl_school" />
+
+        <TextView
+            android:id="@+id/tv_lbl_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/level"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_school"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="%LEVEL%"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_lbl_level"
+            app:layout_constraintStart_toEndOf="@+id/tv_lbl_level" />
+
+        <TextView
+            android:id="@+id/tv_header_casting"
+            style="@style/Base.TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/casting"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_level"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/tv_header_effect"
+            style="@style/Base.TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/effect"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_components"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/tv_header_description"
+            style="@style/Base.TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_spell_resistance"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/tv_lbl_casting_time"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/casting_time"
+            app:layout_constraintTop_toBottomOf="@+id/tv_header_casting"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/tv_casting_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="%CASTING_TIME%"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_lbl_casting_time"
+            app:layout_constraintStart_toEndOf="@+id/tv_lbl_casting_time" />
+
+        <TextView
+            android:id="@+id/tv_lbl_components"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/components"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_casting_time"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/tv_components"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="%COMPONENTS%"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_lbl_components"
+            app:layout_constraintStart_toEndOf="@+id/tv_lbl_components" />
+
+        <TextView
+            android:id="@+id/tv_lbl_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/range"
+            app:layout_constraintTop_toBottomOf="@+id/tv_header_effect"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/tv_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="%RANGE%"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_lbl_range"
+            app:layout_constraintStart_toEndOf="@+id/tv_lbl_range" />
+
+        <TextView
+            android:id="@+id/tv_lbl_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/effect"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_range"
+            tools:layout_editor_absoluteX="1dp" />
+
+        <TextView
+            android:id="@+id/tv_effect"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacus urna, laoreet imperdiet mattis nec, consequat in neque. Aliquam eget porttitor dolor. "
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_lbl_effect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_lbl_effect" />
+
+        <TextView
+            android:id="@+id/tv_lbl_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/duration"
+            app:layout_constraintTop_toBottomOf="@+id/tv_effect"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="%DURATION%"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_lbl_duration"
+            app:layout_constraintStart_toEndOf="@+id/tv_lbl_duration" />
+
+        <TextView
+            android:id="@+id/tv_lbl_saving_throws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/saving_throw"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_duration"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/tv_saving_throws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="%SAVING_THROWS%"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_lbl_saving_throws"
+            app:layout_constraintStart_toEndOf="@+id/tv_lbl_saving_throws" />
+
+        <TextView
+            android:id="@+id/tv_lbl_spell_resistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/spell_resistance"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lbl_saving_throws"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/tv_spell_resistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="%SPELL_RESISTANCE%"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_lbl_spell_resistance"
+            app:layout_constraintStart_toEndOf="@+id/tv_lbl_spell_resistance" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacus urna, laoreet imperdiet mattis nec, consequat in neque. Aliquam eget porttitor dolor. "
+            app:layout_constraintTop_toBottomOf="@+id/tv_header_description"
+            tools:layout_editor_absoluteX="0dp" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

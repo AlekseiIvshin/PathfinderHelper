@@ -5,6 +5,9 @@
     <string name="title_notifications">Notifications</string>
     <string name="characteristics.strength">Strength</string>
 
+    <!--Info-->
+    <string name="sex">Sex</string>
+
     <!--Characteristic-->
     <string name="strength">Strength</string>
     <string name="strength.short">STR</string>
@@ -18,4 +21,33 @@
     <string name="wisdom.short">WIS</string>
     <string name="charisma">Charisma</string>
     <string name="charisma.short">CHA</string>
+
+    <string-array name="sex">
+        <item>None</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+
+    <string name="school">School</string>
+    <string name="level">Level</string>
+    <string name="casting">Casting</string>
+    <string name="casting_time">Casting time</string>
+    <string name="components">Components</string>
+    <string name="effect">Effect</string>
+    <string name="range">Range</string>
+    <string name="duration">Duration</string>
+    <string name="saving_throw">Saving Throw</string>
+    <string name="spell_resistance">Spell Resistance</string>
+    <string name="description">Description</string>
+
+    <!--Heroes list-->
+    <string name="heroes_list.delete">Delete</string>
+    <string name="heroes_list.add">New</string>
+    <string name="heroes_list.edit">Edit</string>
+
+    <!--Create hero-->
+    <string name="hero.name.hint">Enter hero name</string>
+    <string name="next_screen">Next</string>
+
 </resources>

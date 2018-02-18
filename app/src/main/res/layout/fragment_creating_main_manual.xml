@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvStrength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="@string/characteristics.strength"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvStrengthMod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvStrengthValue"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDexterity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dexterity"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvStrength" />
+
+        <TextView
+            android:id="@+id/tvDexterityMod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="65dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="191dp"
+            tools:layout_editor_absoluteY="411dp" />
+
+        <TextView
+            android:id="@+id/tvStrengthValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            tools:layout_editor_absoluteX="213dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvStrength" />
+
+        <ImageButton
+            android:id="@+id/ibStrMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_minus_grey600_36dp"
+            tools:layout_editor_absoluteX="131dp"
+            app:layout_constraintTop_toTopOf="@+id/tvStrengthValue"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvStrengthValue"
+            android:layout_marginBottom="0dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_plus_grey600_36dp"
+            tools:layout_editor_absoluteX="249dp"
+            app:layout_constraintTop_toTopOf="@+id/tvStrengthValue"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvStrengthValue"
+            android:layout_marginBottom="0dp" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

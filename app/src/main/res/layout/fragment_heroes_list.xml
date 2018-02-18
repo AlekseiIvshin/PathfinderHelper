@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -10,15 +11,50 @@
         android:clipToPadding="false"
         android:paddingBottom="72dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/addNewHero"
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu_heroes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_plus_white_24dp"
-        app:layout_anchorGravity="bottom|right|end" />
+        app:layout_anchor="@+id/heroes"
+        app:layout_anchorGravity="right|bottom"
+        fab:menu_colorNormal="@color/appAccent"
+        fab:menu_colorPressed="@color/appAccentPressed"
+        fab:menu_colorRipple="@color/appAccentRipple"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_icon="@drawable/ic_human_greeting_white_24dp"
+        fab:menu_labels_textColor="@color/fab.text_color"
+        fab:menu_labels_colorNormal="@android:color/transparent"
+        fab:menu_labels_colorPressed="@android:color/transparent"
+        fab:menu_labels_colorRipple="@android:color/transparent"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_item_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete_white_18dp"
+            fab:fab_label="@string/heroes_list.delete"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_item_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus_white_18dp"
+            fab:fab_label="@string/heroes_list.add"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_item_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pencil_white_18dp"
+            fab:fab_label="@string/heroes_list.edit"
+            fab:fab_size="mini" />
+    </com.github.clans.fab.FloatingActionMenu>
 
 </android.support.design.widget.CoordinatorLayout>

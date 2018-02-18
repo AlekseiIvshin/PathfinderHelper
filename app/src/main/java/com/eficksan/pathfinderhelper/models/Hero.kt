@@ -1,14 +1,28 @@
 package com.eficksan.pathfinderhelper.models
 
-import io.realm.RealmObject
+import android.arch.persistence.room.ColumnInfo
+import android.arch.persistence.room.Entity
+import android.arch.persistence.room.PrimaryKey
+import com.eficksan.pathfinderhelper.dao.hero.HeroContract
+import java.util.*
 
 /**
- * Created by Aleksei
- * on 17.10.2017.
+ * Created by Aleksei on 04.02.2018.
  */
-open class Hero(
-        var name: String,
-        var ability: Ability
-): RealmObject() {
-    constructor(): this("", Ability())
+@Entity(tableName = HeroContract.TABLE_NAME)
+data class Hero(
+        @ColumnInfo(name = HeroContract.NAME)
+        var name: String
+) {
+    @PrimaryKey(autoGenerate = false)
+    @ColumnInfo(name = HeroContract._ID)
+    var id: String = ""
+
+    companion object {
+        fun createNewHero(name: String): Hero {
+            val hero = Hero(name)
+            hero.id = UUID.randomUUID().toString()
+            return hero
+        }
+    }
 }
