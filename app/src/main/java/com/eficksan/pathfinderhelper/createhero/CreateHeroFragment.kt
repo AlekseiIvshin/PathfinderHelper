@@ -18,6 +18,9 @@ import com.eficksan.pathfinderhelper.di.createhero.DaggerCreateHeroComponent
 import com.eficksan.pathfinderhelper.models.Hero
 import kotlinx.android.synthetic.main.fragment_create_hero.*
 import javax.inject.Inject
+import android.support.v4.app.NavUtils
+import android.view.MenuItem
+
 
 /**
  * Created by Aleksei

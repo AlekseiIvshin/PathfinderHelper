@@ -58,6 +58,8 @@ class HeroListFragment : Fragment(), HeroListContract.View, View.OnClickListener
         fab_item_add.setOnClickListener(this)
         fab_item_delete.setOnClickListener(this)
         fab_item_edit.setOnClickListener(this)
+
+        fab_cancel.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -66,6 +68,9 @@ class HeroListFragment : Fragment(), HeroListContract.View, View.OnClickListener
                 presenter.onCreateNewHero()
                 fab_menu_heroes.close(false)
             }
+            R.id.fab_item_delete->presenter.onDeleteModeOn()
+            R.id.fab_item_edit->presenter.onEditModeOn()
+            R.id.fab_cancel->presenter.onCancelMode()
         }
     }
 
@@ -78,6 +83,29 @@ class HeroListFragment : Fragment(), HeroListContract.View, View.OnClickListener
     }
 
     override fun onHeroClicked(hero: Hero) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        presenter.onHeroSelected(hero)
+    }
+    override fun setMode(modeCode: Int) {
+        when(modeCode){
+            HeroListContract.MODE_LIST->{
+                fab_menu_heroes.showMenu(false)
+                fab_cancel.visibility = View.INVISIBLE
+            }
+            HeroListContract.MODE_EDIT->{
+                fab_menu_heroes.hideMenu(false)
+                fab_cancel.visibility = View.VISIBLE
+                fab_cancel.colorNormal = resources.getColor(R.color.fabEdit, activity.theme)
+                fab_cancel.colorPressed = resources.getColor(R.color.fabEditPressed, activity.theme)
+                fab_cancel.colorRipple = resources.getColor(R.color.fabEditRipple, activity.theme)
+            }
+            HeroListContract.MODE_DELETE->{
+                fab_menu_heroes.hideMenu(false)
+                fab_cancel.visibility = View.VISIBLE
+                fab_cancel.colorNormal = resources.getColor(R.color.fabRemove, activity.theme)
+                fab_cancel.colorPressed = resources.getColor(R.color.fabRemovePressed, activity.theme)
+                fab_cancel.colorRipple = resources.getColor(R.color.fabRemoveRipple, activity.theme)
+            }
+        }
+
     }
 }

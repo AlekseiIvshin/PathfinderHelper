@@ -13,6 +13,7 @@ import com.eficksan.pathfinderhelper.models.Hero
 class HeroesListViewModel(val heroesDao: HeroesDao) : ViewModel() {
 
     private var filter: MutableLiveData<String> = MutableLiveData()
+    var mode:MutableLiveData<Int> = MutableLiveData()
 
     var heroesList: LiveData<List<Hero>> = Transformations.switchMap(
             filter,

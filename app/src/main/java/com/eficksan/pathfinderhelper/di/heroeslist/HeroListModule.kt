@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import com.eficksan.pathfinderhelper.dao.RootDatabase
 import com.eficksan.pathfinderhelper.di.FragmentScope
+import com.eficksan.pathfinderhelper.heroeslist.DeleteHeroUseCase
 import com.eficksan.pathfinderhelper.heroeslist.HeroListContract
 import com.eficksan.pathfinderhelper.heroeslist.HeroListFragment
 import com.eficksan.pathfinderhelper.heroeslist.HeroListPresenter
@@ -37,6 +38,10 @@ class HeroListModule(private val fragment: HeroListFragment) {
 
     @Provides
     @FragmentScope
-    fun providePresenter(viewModel: HeroesListViewModel, rootDatabase: RootDatabase): HeroListContract.Presenter =
-            HeroListPresenter(fragment, viewModel, rootDatabase.heroesDao())
+    fun provideDeleteUseCase(rootDatabase: RootDatabase): DeleteHeroUseCase = DeleteHeroUseCase(rootDatabase.heroesDao())
+
+    @Provides
+    @FragmentScope
+    fun providePresenter(viewModel: HeroesListViewModel, deleteHeroUseCase: DeleteHeroUseCase): HeroListContract.Presenter =
+            HeroListPresenter(fragment, viewModel, deleteHeroUseCase)
 }

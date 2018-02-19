@@ -16,16 +16,17 @@
 
         <TextView
             android:id="@+id/tv_hero_name"
+            style="@style/TextAppearance.AppCompat.Large"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:lines="1"
             android:paddingBottom="@dimen/vertical_margin.default"
             android:paddingLeft="@dimen/horizontal_margin.default"
             android:paddingRight="@dimen/horizontal_margin.default"
             android:paddingTop="@dimen/vertical_margin.default"
-            android:ellipsize="end"
-            android:layout_weight="1"
-            style="@style/TextAppearance.AppCompat.Body2"
-            android:lines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit velit, ultricies ac libero quis, feugiat fringilla quam. Suspendisse condimentum gravida consequat. " />
 
     </LinearLayout>

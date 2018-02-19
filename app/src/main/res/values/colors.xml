@@ -8,8 +8,14 @@
     <color name="appAccentRipple">#212121</color>
 
     <color name="fabAdd">#33691E</color>
+    <color name="fabAddPressed">#468f28</color>
+    <color name="fabAddRipple">#99FFFFFF</color>
     <color name="fabRemove">#DD2C00</color>
+    <color name="fabRemovePressed">#ff3f0f</color>
+    <color name="fabRemoveRipple">#99FFFFFF</color>
     <color name="fabEdit">#FF6D00</color>
+    <color name="fabEditPressed">#ff8b33</color>
+    <color name="fabEditRipple">#99FFFFFF</color>
 
     <!--FAB-->
     <color name="fab.text_color">@color/appAccent</color>
