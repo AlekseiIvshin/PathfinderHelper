@@ -20,12 +20,9 @@
         app:layout_anchor="@+id/heroes"
         app:layout_anchorGravity="right|bottom"
         fab:menu_colorNormal="@color/appAccent"
-        fab:menu_colorPressed="@color/appAccentPressed"
-        fab:menu_colorRipple="@color/appAccentRipple"
-        fab:menu_backgroundColor="@android:color/transparent"
         fab:menu_icon="@drawable/ic_human_greeting_white_24dp"
         fab:menu_labels_textColor="@color/fab.text_color"
-        fab:menu_labels_colorNormal="@android:color/transparent"
+        fab:menu_labels_colorNormal="@android:color/white"
         fab:menu_labels_colorPressed="@android:color/transparent"
         fab:menu_labels_colorRipple="@android:color/transparent"
         android:layout_marginRight="10dp"
@@ -37,6 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_delete_white_18dp"
+            fab:fab_colorNormal="@color/fabRemove"
             fab:fab_label="@string/heroes_list.delete"
             fab:fab_size="mini" />
 
@@ -45,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_plus_white_18dp"
+            fab:fab_colorNormal="@color/fabAdd"
             fab:fab_label="@string/heroes_list.add"
             fab:fab_size="mini" />
 
@@ -53,6 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_pencil_white_18dp"
+            fab:fab_colorNormal="@color/fabEdit"
             fab:fab_label="@string/heroes_list.edit"
             fab:fab_size="mini" />
     </com.github.clans.fab.FloatingActionMenu>

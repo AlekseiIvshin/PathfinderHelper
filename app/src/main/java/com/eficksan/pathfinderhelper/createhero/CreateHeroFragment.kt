@@ -8,12 +8,14 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.eficksan.pathfinderhelper.App
 import com.eficksan.pathfinderhelper.CreateHeroActivity
 import com.eficksan.pathfinderhelper.R
 import com.eficksan.pathfinderhelper.di.createhero.CreateHeroComponent
 import com.eficksan.pathfinderhelper.di.createhero.CreateHeroModule
 import com.eficksan.pathfinderhelper.di.createhero.DaggerCreateHeroComponent
+import com.eficksan.pathfinderhelper.models.Hero
 import kotlinx.android.synthetic.main.fragment_create_hero.*
 import javax.inject.Inject
 
@@ -74,15 +76,16 @@ class CreateHeroFragment : Fragment(), CreateHeroContract.View, View.OnClickList
         }
     }
 
-    override fun onHeroCreated() {
+    override fun onHeroCreated(newHero: Hero) {
+        Toast.makeText(activity,getString(R.string.create_hero_success_hero_created, newHero.name), Toast.LENGTH_LONG).show()
         activity.finish()
     }
 
     override fun onHeroCreationError(errorCode: Int) {
         when (errorCode) {
-            CreateHeroContract.ERROR_NONE-> Log.d("CreateHero", "No errors")
-            CreateHeroContract.ERROR_EMPTY_NAME-> Log.d("CreateHero", "Empty name")
-            CreateHeroContract.ERROR_NAME_EXIST-> Log.d("CreateHero", "Name already used")
+            CreateHeroContract.ERROR_NONE-> et_hero_name.error = null
+            CreateHeroContract.ERROR_EMPTY_NAME-> et_hero_name.error = getString(R.string.create_hero_error_empty_name)
+            CreateHeroContract.ERROR_NAME_EXIST-> et_hero_name.error = getString(R.string.create_hero_error_name_exists)
         }
     }
 }

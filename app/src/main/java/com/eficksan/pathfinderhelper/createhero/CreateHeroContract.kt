@@ -2,6 +2,7 @@ package com.eficksan.pathfinderhelper.createhero
 
 import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.LifecycleOwner
+import com.eficksan.pathfinderhelper.models.Hero
 import com.eficksan.pathfinderhelper.mvp.BasePresenter
 import com.eficksan.pathfinderhelper.mvp.BaseView
 
@@ -24,7 +25,7 @@ interface CreateHeroContract {
 
     interface View : BaseView<Presenter>, LifecycleOwner {
         fun isSubmitEnabled(isEnabled: Boolean)
-        fun onHeroCreated()
+        fun onHeroCreated(newHero: Hero)
         fun onHeroCreationError(errorCode: Int)
     }
 }

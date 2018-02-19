@@ -21,7 +21,7 @@ import javax.inject.Inject
  * Created by Aleksei
  * on 18.10.2017.
  */
-class HeroListFragment : Fragment(), HeroListContract.View, View.OnClickListener, HeroListItemViewHolder.ItemListener {
+class HeroListFragment : Fragment(), HeroListContract.View, View.OnClickListener, HeroListItemViewHolder.OnItemClickListener {
 
     var injector: HeroListComponent? = null
 
@@ -62,7 +62,10 @@ class HeroListFragment : Fragment(), HeroListContract.View, View.OnClickListener
 
     override fun onClick(view: View?) {
         when (view!!.id) {
-            R.id.fab_item_add -> presenter.onCreateNewHero()
+            R.id.fab_item_add -> {
+                presenter.onCreateNewHero()
+                fab_menu_heroes.close(false)
+            }
         }
     }
 
@@ -74,7 +77,7 @@ class HeroListFragment : Fragment(), HeroListContract.View, View.OnClickListener
         startActivity(Intent(activity, CreateHeroActivity::class.java))
     }
 
-    override fun onDeleteItem(hero: Hero) {
-        presenter.onDeleteHero(hero.name)
+    override fun onHeroClicked(hero: Hero) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

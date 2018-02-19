@@ -9,15 +9,17 @@ import io.reactivex.internal.operators.observable.ObservableJust
 /**
  * Created by Aleksei on 18.02.2018.
  */
-class AddNewHeroUseCase(private val heroesDao: HeroesDao) : UseCase<String, Unit>() {
+class AddNewHeroUseCase(private val heroesDao: HeroesDao) : UseCase<String, Hero>() {
 
-    override fun getObservable(heroName: String): Observable<Unit> {
-        return ObservableJust(heroName)
+    override fun getObservable(parameter: String): Observable<Hero> {
+        return ObservableJust(parameter)
                 .map {
                     if (heroesDao.checkExistenceByName(it) > 0) {
                         throw HeroAlreadyExistsException()
                     } else {
-                        heroesDao.insertHero(Hero.createNewHero(heroName))
+                        val hero = Hero.createNewHero(parameter)
+                        heroesDao.insertHero(hero)
+                        return@map hero
                     }
                 }
     }

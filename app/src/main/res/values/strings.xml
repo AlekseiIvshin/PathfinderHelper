@@ -28,7 +28,6 @@
         <item>Female</item>
     </string-array>
 
-
     <string name="school">School</string>
     <string name="level">Level</string>
     <string name="casting">Casting</string>
@@ -49,5 +48,7 @@
     <!--Create hero-->
     <string name="hero.name.hint">Enter hero name</string>
     <string name="next_screen">Next</string>
-
+    <string name="create_hero.success.hero_created">Hero %s created</string>
+    <string name="create_hero.error.empty_name">Name cannot not be empty</string>
+    <string name="create_hero.error.name_exists">Name already exists</string>
 </resources>
