@@ -1,4 +1,4 @@
-package com.eficksan.pathfinderhelper.createhero
+package com.eficksan.pathfinderhelper.modifyhero
 
 import com.eficksan.pathfinderhelper.dao.hero.HeroesDao
 import com.eficksan.pathfinderhelper.models.Hero
@@ -9,17 +9,16 @@ import io.reactivex.internal.operators.observable.ObservableJust
 /**
  * Created by Aleksei on 18.02.2018.
  */
-class AddNewHeroUseCase(private val heroesDao: HeroesDao) : UseCase<String, Hero>() {
+class AddNewHeroUseCase(private val heroesDao: HeroesDao) : UseCase<Hero, Hero>() {
 
-    override fun getObservable(parameter: String): Observable<Hero> {
+    override fun getObservable(parameter: Hero): Observable<Hero> {
         return ObservableJust(parameter)
                 .map {
-                    if (heroesDao.checkExistenceByName(it) > 0) {
+                    if (heroesDao.checkExistenceByName(it.id) > 0) {
                         throw HeroAlreadyExistsException()
                     } else {
-                        val hero = Hero.createNewHero(parameter)
-                        heroesDao.insertHero(hero)
-                        return@map hero
+                        heroesDao.insertHero(it)
+                        return@map it
                     }
                 }
     }

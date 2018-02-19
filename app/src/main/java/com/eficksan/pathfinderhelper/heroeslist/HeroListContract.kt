@@ -30,5 +30,6 @@ interface HeroListContract {
         fun updateHeroes(heroes: List<Hero>?)
         fun showCreateHeroScreen()
         fun setMode(modeCode: Int)
+        fun onEditHero(hero: Hero)
     }
 }

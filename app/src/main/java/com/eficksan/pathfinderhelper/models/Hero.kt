@@ -19,10 +19,12 @@ data class Hero(
     var id: String = ""
 
     companion object {
-        fun createNewHero(name: String): Hero {
+        fun createHero(id: String, name: String): Hero {
             val hero = Hero(name)
-            hero.id = UUID.randomUUID().toString()
+            hero.id = id
             return hero
         }
+
+        fun createNewHero(name: String): Hero = createHero(UUID.randomUUID().toString(), name)
     }
 }

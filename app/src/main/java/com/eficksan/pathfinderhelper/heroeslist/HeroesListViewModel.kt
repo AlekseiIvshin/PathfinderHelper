@@ -1,4 +1,4 @@
-package com.eficksan.pathfinderhelper.viewmodel
+package com.eficksan.pathfinderhelper.heroeslist
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData

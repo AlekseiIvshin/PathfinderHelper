@@ -1,6 +1,6 @@
 package com.eficksan.pathfinderhelper.di.createhero
 
-import com.eficksan.pathfinderhelper.createhero.CreateHeroFragment
+import com.eficksan.pathfinderhelper.modifyhero.ModifyHeroFragment
 import com.eficksan.pathfinderhelper.di.AppComponent
 import com.eficksan.pathfinderhelper.di.FragmentScope
 import dagger.Component
@@ -16,5 +16,5 @@ import dagger.Component
 @FragmentScope
 interface CreateHeroComponent {
 
-    fun inject(fragment: CreateHeroFragment)
+    fun inject(fragment: ModifyHeroFragment)
 }

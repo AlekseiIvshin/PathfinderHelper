@@ -20,7 +20,7 @@ interface HeroesDao {
     fun checkExistenceByName(name: String): Int
 
     @Query("SELECT * FROM " + HeroContract.TABLE_NAME +" WHERE "+HeroContract.COLUMN_ID+" LIKE :id")
-    fun searchById(id: String): Hero
+    fun searchById(id: String): LiveData<Hero>
 
     @Insert
     fun insertHero(hero: Hero)

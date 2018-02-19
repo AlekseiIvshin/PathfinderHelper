@@ -8,7 +8,7 @@ import io.reactivex.schedulers.Schedulers
 /**
  * Created by Aleksei on 18.02.2018.
  */
-open abstract class UseCase<P, R> {
+abstract class UseCase<P, R> {
 
     abstract fun getObservable(parameter: P): Observable<R>
 

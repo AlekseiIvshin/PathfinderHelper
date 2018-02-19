@@ -3,10 +3,8 @@ package com.eficksan.pathfinderhelper.heroeslist
 import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.OnLifecycleEvent
-import com.eficksan.pathfinderhelper.dao.hero.HeroesDao
 import com.eficksan.pathfinderhelper.models.Hero
 import com.eficksan.pathfinderhelper.mvp.BasePresenter
-import com.eficksan.pathfinderhelper.viewmodel.HeroesListViewModel
 import io.reactivex.disposables.Disposable
 
 /**
@@ -62,6 +60,7 @@ class HeroListPresenter(
                 override fun onSubscribe(d: Disposable) {}
                 override fun onComplete() {}
             })
+            HeroListContract.MODE_EDIT -> view.onEditHero(hero)
         }
     }
 }

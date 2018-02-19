@@ -1,4 +1,4 @@
-package com.eficksan.pathfinderhelper.createhero
+package com.eficksan.pathfinderhelper.modifyhero
 
 import android.arch.lifecycle.LifecycleObserver
 import android.arch.lifecycle.LifecycleOwner
@@ -10,7 +10,7 @@ import com.eficksan.pathfinderhelper.mvp.BaseView
  * Created by Aleksei
  * on 18.10.2017.
  */
-interface CreateHeroContract {
+interface ModifyHeroContract {
 
     companion object {
         const val ERROR_NONE = -1
@@ -21,11 +21,14 @@ interface CreateHeroContract {
     interface Presenter : BasePresenter, LifecycleObserver {
         fun onNameChanged(name: CharSequence?)
         fun onSubmit()
+        fun onEditHero(heroId: String)
     }
 
     interface View : BaseView<Presenter>, LifecycleOwner {
         fun isSubmitEnabled(isEnabled: Boolean)
         fun onHeroCreated(newHero: Hero)
         fun onHeroCreationError(errorCode: Int)
+        fun updateHero(hero: Hero)
+        fun onHeroUpdated(hero: Hero)
     }
 }

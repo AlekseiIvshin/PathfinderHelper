@@ -9,7 +9,7 @@ import com.eficksan.pathfinderhelper.heroeslist.DeleteHeroUseCase
 import com.eficksan.pathfinderhelper.heroeslist.HeroListContract
 import com.eficksan.pathfinderhelper.heroeslist.HeroListFragment
 import com.eficksan.pathfinderhelper.heroeslist.HeroListPresenter
-import com.eficksan.pathfinderhelper.viewmodel.HeroesListViewModel
+import com.eficksan.pathfinderhelper.heroeslist.HeroesListViewModel
 import dagger.Module
 import dagger.Provides
 

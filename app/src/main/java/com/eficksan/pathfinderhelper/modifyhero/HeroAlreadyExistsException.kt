@@ -1,4 +1,4 @@
-package com.eficksan.pathfinderhelper.createhero
+package com.eficksan.pathfinderhelper.modifyhero
 
 /**
  * Created by Aleksei on 18.02.2018.

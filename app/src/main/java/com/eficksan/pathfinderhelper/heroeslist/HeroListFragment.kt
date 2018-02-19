@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.eficksan.pathfinderhelper.App
-import com.eficksan.pathfinderhelper.CreateHeroActivity
+import com.eficksan.pathfinderhelper.ModifyHeroActivity
 import com.eficksan.pathfinderhelper.R
 import com.eficksan.pathfinderhelper.di.heroeslist.DaggerHeroListComponent
 import com.eficksan.pathfinderhelper.di.heroeslist.HeroListComponent
@@ -79,12 +79,19 @@ class HeroListFragment : Fragment(), HeroListContract.View, View.OnClickListener
     }
 
     override fun showCreateHeroScreen() {
-        startActivity(Intent(activity, CreateHeroActivity::class.java))
+        startActivity(Intent(activity, ModifyHeroActivity::class.java))
     }
 
     override fun onHeroClicked(hero: Hero) {
         presenter.onHeroSelected(hero)
     }
+
+    override fun onEditHero(hero: Hero) {
+        val intent = Intent(activity, ModifyHeroActivity::class.java)
+        intent.putExtra(ModifyHeroActivity.EXTRA_HERO_ID,hero.id)
+        startActivity(intent)
+    }
+
     override fun setMode(modeCode: Int) {
         when(modeCode){
             HeroListContract.MODE_LIST->{
